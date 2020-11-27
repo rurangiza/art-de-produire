@@ -9,6 +9,9 @@ the final version should have :
 ## V1 (basics)
 
 - a nice dark mode and responsive design
+  - home page
+  - article page
+  - post
 - a blog
 - video courses with a playlist navigation
 - a podcast page (maybe)
