@@ -8,16 +8,12 @@ the final version should have :
 
 ## V1 (basics)
 
----
-
 - a nice dark mode and responsive design
 - a blog
 - video courses with a playlist navigation
 - a podcast page (maybe)
 
 ## V2 (useful tools)
-
----
 
 - white mode / dark mode switch
 - a music glossary
