@@ -70,10 +70,39 @@ header {
 .navigation li {
   padding: 15px;
   cursor: pointer;
-  transition: 0.3s ease-in-out;
+  position: relative;
 }
 .navigation li:hover {
   color: white;
+  background-color: var(--medium-black);
+  border-radius: 3px;
+}
+
+.navigation li:before {
+  content: "";
+  position: absolute;
+  background: rgb(17, 17, 17);
+  height: 0px;
+  width: 80%;
+  border-radius: 3px 3px 0 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  /*transform-origin: bottom center;*/
+  transition: height 0.3s ease-in-out;
+}
+
+.navigation li:hover:before {
+  content: "";
+  position: absolute;
+  background: rgb(17, 17, 17);
+  height: 4px;
+  width: 80%;
+  border-radius: 3px 3px 0 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  /*transform-origin: bottom center;*/
 }
 
 .menu-hamburger {
