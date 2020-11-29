@@ -163,7 +163,7 @@ header {
 
   .settings-rolldown-menu {
     position: absolute;
-    top: 200%;
+    top: 50%;
     left: -100px;
     list-style: none;
     height: 120px;
