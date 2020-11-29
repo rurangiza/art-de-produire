@@ -165,11 +165,12 @@ header {
   .settings-icon:focus .settings-rolldown-menu {
     opacity: 1;
     pointer-events: all;
+    transform: translateY(-3px);
   }
 
   .settings-rolldown-menu {
     position: absolute;
-    top: 200%;
+    top: 210%;
     left: -100px;
     list-style: none;
     height: 120px;
