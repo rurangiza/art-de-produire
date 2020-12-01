@@ -8,6 +8,7 @@ html {
   --light-gray: #e9e9e9;
   --dusty-white: #f7f6f3;
   --dirty-white: #e8e7e4;
+  --red: #ff4742;
   --gradient1: linear-gradient(
     117.03deg,
     #328bb3 0%,
@@ -50,11 +51,12 @@ h1 {
 }
 
 h5 {
-  font-weight: 400;
-  font-size: 15px;
+  font-weight: 600;
+  font-size: 12px;
   margin: 10px 0 7px;
-  color: var(--medium-gray);
+  color: var(--light-gray);
   cursor: default;
+  text-transform: uppercase;
 }
 
 p {
@@ -66,30 +68,33 @@ p {
 
 /* Components  */
 
-.btn-small-grad1 {
+.btn-small-primary {
   font-size: 12px;
   font-weight: 500;
   padding: 0.7em 1.7em;
   border-radius: 3px;
-  background: var(--gradient1);
+  background: var(--red);
   text-decoration: none;
   color: white;
   cursor: pointer;
+  text-transform: uppercase;
+  transition: opacity 0.3s;
 }
-.btn-small-grad1:hover {
-  background: var(--gradient2);
+.btn-small-primary:hover {
+  opacity: 0.7;
 }
 
 .btn-big-cta {
   display: inline-block;
   text-align: center;
-  background: var(--gradient1);
-  color: white;
+  background: var(--red);
+  color: var(--dark-black);
   padding: 1em 1.5em;
   border-radius: 3px;
+  transition: opacity 0.3s;
 }
 .btn-big-cta:hover {
-  background: var(--gradient2);
+  opacity: 0.7;
 }
 
 a.btn-big-cta {
@@ -100,6 +105,7 @@ a.btn-big-cta {
 header {
   background-color: var(--dark-black);
   width: 100vw;
+  border: 2px solid var(--dark-gray);
 }
 .header-container {
   display: flex;
@@ -123,6 +129,7 @@ header {
   padding: 15px;
   cursor: pointer;
   position: relative;
+  transition: background 0.2s ease-in-out;
 }
 .navigation li:hover {
   color: white;
@@ -140,7 +147,6 @@ header {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  /*transform-origin: bottom center;*/
   transition: height 0.3s ease-in-out;
 }
 
@@ -180,7 +186,7 @@ header {
   margin-top: -15px;
 }
 .darkmode-toggle p {
-  color: black;
+  color: var(--medium-gray);
   font-size: 14px;
 }
 .toggle {
@@ -244,22 +250,23 @@ div.hero-container {
 
 @media screen and (min-width: 740px) {
   /*  Header */
-  .navigation {
-    display: flex;
-    margin-left: auto;
-    list-style: none;
-    color: var(--medium-gray);
-    font-size: 14px;
-  }
-
-  .menu-hamburger {
-    display: none;
-  }
-
   .header-container {
     max-width: 1000px;
     margin: auto;
     padding: 0 2rem;
+  }
+
+  .navigation {
+    display: flex;
+    margin-right: auto;
+    list-style: none;
+    color: var(--medium-gray);
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .menu-hamburger {
+    display: none;
   }
 
   .search-icon {
@@ -274,7 +281,7 @@ div.hero-container {
   .settings-icon:focus .settings-rolldown-menu {
     opacity: 1;
     pointer-events: all;
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     z-index: 1;
   }
 
@@ -288,10 +295,10 @@ div.hero-container {
     padding: 1em 1.5em;
     border-radius: 3px;
     font-size: 14px;
-    color: black;
-    background: white;
+    color: var(--medium-gray);
+    background: var(--dark-black);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
-    border: 0.5px solid rgba(0, 0, 0, 0.12);
+    border: 2px solid var(--dark-gray);
     border-radius: 6px;
     opacity: 0;
     pointer-events: none;
@@ -302,15 +309,15 @@ div.hero-container {
     border-radius: 5px;
   }
   .settings-rolldown-menu li:hover {
-    background-color: var(--dusty-white);
-    color: dodgerblue;
+    background-color: var(--medium-black);
+    color: white;
   }
 
   /* Hero Section  */
 
   .hero {
     height: 90vh;
-    background-image: url(https://i.ibb.co/VV88xmL/Hero-background-142x840.png);
+    background-image: url(https://i.ibb.co/0qpv5C4/Hero-background-1420x840.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left;
@@ -342,7 +349,7 @@ div.hero-container {
   .hero p {
     font-size: 20px;
     text-align: left;
-    width: 350px;
+    width: 370px;
     padding-left: 0;
     line-height: 1.4;
   }
@@ -350,7 +357,7 @@ div.hero-container {
   a.btn-big-cta {
     display: inline-block;
     text-align: left;
-    background: var(--gradient1);
+    background: var(--red);
     color: white;
     padding: 1em 1.5em;
     border-radius: 3px;
